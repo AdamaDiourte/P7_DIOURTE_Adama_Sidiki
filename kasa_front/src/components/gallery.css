@@ -1,0 +1,65 @@
+
+.gallery {
+    margin-top: 130px;
+    
+}
+/* Adaptation pour les tablettes */
+@media (min-width: 768px) {
+    .gallery {
+        margin-top: 15px;
+        background-color: aqua;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 300px;
+    }
+
+    .gallery-item {
+        flex: 0 0 calc(50% - 10px); /* Prend en compte la marge */
+        margin: 5px;
+    }
+}
+
+@media (min-width: 900px) {
+    .gallery {
+        margin-top: 350px;
+    }
+}
+
+/* Media query pour autres tablettes */
+@media (min-width: 1024px) {
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; 
+        align-items: flex-start;
+        margin-top: 350px;
+    }
+
+    .gallery > * {
+        flex: 0 0 40%; /* Chaque élément occupe environ un tiers de la ligne */
+        box-sizing: border-box; /* Pour inclure la marge et la bordure dans la largeur */
+        padding: 10px;
+       
+    }
+
+
+}
+
+/* Media query pour PC */
+@media (min-width: 1366px) {
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+        margin-top: 300px;
+    }
+
+    .gallery > * {
+        flex: 0 0 33.33%;  /* Chaque élément occupe environ un tiers de la ligne */
+       
+    }
+
+
+}
+
