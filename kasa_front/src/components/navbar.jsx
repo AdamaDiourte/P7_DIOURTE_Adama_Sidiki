@@ -1,31 +1,29 @@
 import React from 'react'
 import logo from '../images/Logo.png';
 import "./navbar.css";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Navbar() {
     return (
         <nav className="navbar">
-
-            <Link to="/">
+            <NavLink to="/">
                 <div className="navbar-logo">
                     <img src={logo} alt="Nom du site" />
                 </div>
-            </Link>
+            </NavLink>
 
-            <ul className='menu'>
-                <li>
-                    <Link to="/">Accueil</Link>
-                </li>
-
-                <li>
-                    <Link to="/apropos">A propos</Link>
-                </li>
-            </ul>
+            <div className='div-navlink'>
+                <NavLink to="/" className={({ isActive }) => isActive ? 'link-active' : ''}>
+                    Accueil
+                </NavLink>
+                
+                <NavLink to="/apropos" className={({ isActive }) => isActive ? 'link-active' : ''}>
+                    A propos
+                </NavLink>
+            </div>
 
         </nav>
     );
 }
-
 
 export default Navbar;
