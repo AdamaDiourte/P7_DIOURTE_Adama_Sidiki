@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from "./components/header";
-import Navbar from "./components/navbar";
-import Banner from "./components/banner";
-import Main from "./components/main";
-import Gallery from "./components/gallery";
-import Footer from "./components/footer";
-import About from "./components/about";
+import Header from "./components/accueil/header";
+import Navbar from "./components/layaout/navbar";
+import Banner from "./components/accueil/banner";
+import Main from "./components/accueil/main";
+import Gallery from "./components/accueil/gallery";
+import Footer from "./components/layaout/footer";
+import About from "./components/about/about";
 
 
 

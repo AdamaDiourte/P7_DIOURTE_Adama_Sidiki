@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center; 
     align-items: center; 
-    background-image: url('../images/bannerImage.png'); 
+    background-image: url('../../images/bannerImage.png'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -33,6 +33,7 @@
 /* Media query pour PC */
 @media (min-width: 1024px) {
     .banner-text {
-        font-size: 40px; 
+        font-size: 40px;
+      
     }
 }

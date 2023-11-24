@@ -1,0 +1,212 @@
+.banner-container-appart {
+    background-image: url('../../images/Background.png'); 
+    background-size: 100% 100%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 10vh; 
+    border-radius: 5px;
+    margin-top: 10px;
+    object-fit: cover;
+}
+
+.pageAppart{
+    background-color: rgb(204, 186, 186);
+    color: #FF6060;
+  
+    padding: 10px;
+    
+}
+
+.titreAppart{
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 0;
+
+}
+
+.lieuParis{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 5px 0 5px 0;
+}
+
+.tagDiv {
+    display: flex; 
+    gap: 10px;
+}
+
+.tagDiv button {
+    border: 1px solid #ff6060;
+    color: white; 
+    background-color: #ff6060; 
+    padding: 5px 10px;
+    margin: 0; 
+    border-radius: 15px;
+    min-width: 80px;
+    text-align: center;
+    margin: 0 0 20px 0;
+    cursor: pointer;
+}
+
+.tagDiv button {
+    transition: background-color 0.5s ease, color 0.5s ease;
+   
+}
+
+.tagDiv button:hover {
+    background-color: #D3D3D3;
+    color: #0a0904; 
+}
+
+
+
+.dataAppart-bis-2{
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.etoile {
+    display: flex; 
+}
+
+.idProprio {
+    display: flex; 
+    align-items: center; 
+}
+
+.nomPrenomProprio {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.prenomProprio, .nomProprio {
+    margin: 0; 
+}
+
+.photoProprio {
+    width: 40px; 
+    height: 40px; 
+    background-color: #D3D3D3; 
+    border-radius: 50%; 
+    margin-left: 10px; 
+}
+
+.description_buton, .equipement_buton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff6060;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 15px 0 15px 0;
+    border-radius: 5px;
+}
+
+.description_buton button, .equipement_buton button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.description_buton svg, .equipement_buton svg {
+    color: white;
+}
+
+.description_texte{
+    text-align: justify;
+}
+
+.equipement_texte, .description_texte {
+    color: #484744;
+    
+}
+.equipement_texte, ul {
+    padding: 0;
+}
+
+.equipement_texte li {
+    list-style-type: none; 
+    margin-bottom: 5px; 
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media query pour les tablettes */
+@media (min-width: 768px) {
+    .banner-container-appart {
+        min-height: 20vh; /* Ajustez la hauteur pour les tablettes */
+        border-radius: 20px; 
+    }
+
+    .pageAppart {
+       max-width: 1300px;
+       margin: auto;
+       padding: 15px;
+    }
+
+    .descriptEquip{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .description, .equipement{
+        width: 45%;
+        height: 250px;
+    }
+
+    .appartData-2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .dataAppart-bis-2{
+        display: block;
+    }
+    .idProprio{
+        margin-bottom : 15px;
+    }
+    
+    .tagDiv button {
+        min-width: 25%;
+        margin-top: 15px;
+    }
+
+   
+
+    .photoProprio {
+        width: 50px;
+        height: 50px;
+    }
+   
+   
+}
+
+/* Media query pour PC */
+@media (min-width: 1024px) {
+    
+    .banner-container-appart {
+        min-height: 40vh; /* Ajustez la hauteur pour les tablettes */
+        border-radius: 20px; 
+    }
+}

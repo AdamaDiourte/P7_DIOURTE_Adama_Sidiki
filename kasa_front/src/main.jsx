@@ -1,13 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import Header from "./components/header";
-import Navbar from "./components/navbar";
-import Banner from "./components/banner";
-import About from "./components/about";
-import PageApp from "./components/pageApp";
-import Footer from "./components/footer";
-
+import Navbar from "./components/layaout/navbar.jsx";
+import Banner from "./components/accueil/banner.jsx";
+import About from "./components/about/about.jsx";
+import PageApp from "./components/appartement/pageApp.jsx";
+import Footer from "./components/layaout/footer.jsx";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -27,7 +25,6 @@ const router = createBrowserRouter([
     element: (
       <div>
          <Navbar/>
-         <Banner/>
         <PageApp/>
         <Footer />
        
