@@ -1,0 +1,23 @@
+.tagDiv {
+    display: flex; 
+    gap: 10px;
+  }
+  
+.tagSpan {
+    border: none; 
+    background-color: #ff6060; 
+    color: white;
+    padding: 5px 10px; 
+    border-radius: 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    width: 115px;
+    text-align: center;
+    font-size: 0.5rem;
+
+}
+  
+.tagSpan :hover {
+    background-color: #e05a5a;
+}
+  

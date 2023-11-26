@@ -1,0 +1,30 @@
+.description_buton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff6060;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.description_buton button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.description_buton svg {
+    color: white;
+}
+.description_texte {
+    text-align: justify;
+    color: #ff6060;
+    margin-top: 10px;
+}
+
+

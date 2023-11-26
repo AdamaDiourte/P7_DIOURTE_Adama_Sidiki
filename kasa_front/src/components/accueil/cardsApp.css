@@ -1,44 +1,83 @@
 .cardAppart {
     border-radius: 10px;
     margin: 20px 15px;
-    border: 1px solid;
+    border: 1px solid #ddd; 
     min-width: 30%;
-    min-height:40vh;
-    background-image: linear-gradient(to top, #863535, #ff6060);
+    min-height: 40vh;
+    background-color: #f4d8d8; 
     position: relative;
-    transition: background-color 0.5s, transform 0.5s;
-}
-
-.cardAppart:hover {
-    background-color: rgb(248, 180, 178);
-    transform: scale(1.02);
+    overflow: hidden; 
+    transition: transform 0.5s;
     cursor: pointer;
+   
 }
 
-h2 {
-    color: #f9f4f4;
-    font-size: 13px;
+.cardAppart .img_cover { 
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.cardAppart:hover .img_cover {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+.cardAppart .title_Appart {
+    color: #FFFFFF;
+    font-size: 18px;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    max-width: 100px;
-    margin-left: 20px;
-    transition: color 0.5s;
+    bottom: 10px;
+    left: 10px;
+    margin: 0;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
 }
 
-/* Adaptation pour les tablettes */
+
+
+
 @media (min-width: 768px) {
-    .cardAppart {
-        min-width: 30vh;
-        min-height:20vh;
+    
+    /* .cardAppart {
+        min-width: 45%;
+        height: auto;
+    } */
+    /* .cardAppart {
+        min-width: 45%; 
+        min-height: 30vh; 
+    } */
+
+    .div_Appart {
+        margin-top: 20px;
+      
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+      
     }
+
+
+    .div_Appart > * {
+        flex: 0 0 calc(33.33% - 10px); /* Chaque élément prend environ un tiers de la largeur totale, moins 10px pour l'espacement */
+        margin: 5px; /* Marge autour de chaque élément */
+        
+       
+    }
+
 }
 
-/* Adaptation pour PC */
+
+
+
 @media (min-width: 1024px) {
     .cardAppart {
-        min-width: 30vh;
-        min-height:35vh;
+        min-width: 30%;
+        height: auto;
     }
 }
-

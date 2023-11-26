@@ -10,6 +10,12 @@
     align-items: center;
     padding: 0 5px;
     border: 1px solid greenyellow;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    background-color: white; 
+    z-index: 1000; 
 }
 
 .div-navlink {
@@ -28,14 +34,9 @@
     text-decoration: none;
 }
 
-/* .div-navlink a:hover {
-    cursor: pointer;
-    text-decoration: underline;
-} */
-
 .div-navlink .link-active {
     text-decoration: underline;
-    color: #FF6060; /* ou toute autre couleur de votre choix */
+    color: #FF6060; 
 }
 
 /* Media query pour les tablettes */

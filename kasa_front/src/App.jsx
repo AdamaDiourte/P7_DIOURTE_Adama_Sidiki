@@ -2,8 +2,8 @@ import React from 'react';
 import Header from "./components/accueil/header";
 import Navbar from "./components/layaout/navbar";
 import Banner from "./components/accueil/banner";
-import Main from "./components/accueil/main";
-import Gallery from "./components/accueil/gallery";
+import ContenerMain from "./components/accueil/main";
+import CardsAppartement from "./components/accueil/cardsAppartement";
 import Footer from "./components/layaout/footer";
 import About from "./components/about/about";
 
@@ -18,16 +18,15 @@ function App() {
   return (
     <div>
 
-
       <Header>
         <Navbar/>
         <Banner/>
       </Header>
-      <About/>
       
-     <Main>
-        <Gallery/>
-     </Main>
+      
+     <ContenerMain>
+        <CardsAppartement/>
+     </ContenerMain>
      <Footer/>
      
 

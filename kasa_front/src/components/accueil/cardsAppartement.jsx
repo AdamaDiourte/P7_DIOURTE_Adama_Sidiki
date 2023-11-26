@@ -1,18 +1,22 @@
-import React from 'react'
-import "./cardsApp.css";
+import React from 'react';
 import { Link } from 'react-router-dom';
+import appartData from '../../data/data.js';
 
+import "./cardsApp.css";
 
 function CardsAppartement() {
   return (
-    <div>
-        <Link to="appartement">
+    <div className='div_Appart'>
+      {appartData.map(item => (
+        <Link to={`appartement/${item.id}`} key={item.id}>
           <div className='cardAppart'>
-            <h2>Titre de la location</h2>
+            <img className='img_cover' src={item.cover} alt={item.title} />
+            <h2 className='title_Appart'>{item.title}</h2>
           </div>
         </Link>
+      ))}
     </div>
-  )
+  );
 }
 
-export default CardsAppartement
+export default CardsAppartement;
