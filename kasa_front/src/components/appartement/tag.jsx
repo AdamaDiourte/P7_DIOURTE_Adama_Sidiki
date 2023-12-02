@@ -4,7 +4,7 @@ import appartData from '../../data/data.js';
 import './tag.css'; 
 
 function TagName() {
-  const { appartId } = useParams(); // Utiliser useParams pour récupérer l'ID de l'appartement
+  const { appartId } = useParams(); // Récupérer l'ID de l'appartement
 
   // Trouver l'appartement correspondant à partir de l'ID
   const appart = appartData.find(item => item.id === appartId);

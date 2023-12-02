@@ -2,38 +2,38 @@
     display: flex;
     justify-content: center; 
     align-items: center; 
-    background-image: url('../../images/bannerImage.png'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
     min-height: 10vh; 
     border-radius: 5px;
-    margin-top: 10px;
+    margin: 60px 5px 0 5px;
 }
 
 .banner-text {
     color: white; 
-    font-size: 13px; 
+    font-size: 20px; 
     text-align: center; 
 }
 
-
-/* Media query pour les tablettes */
+/* Media queries */
 @media (min-width: 768px) {
     .banner-text {
         font-size: 24px; 
     }
     .banner-container {
-        margin:10px;
         min-height: 20vh;
         border-radius: 20px; 
     }
 }
 
-/* Media query pour PC */
 @media (min-width: 1024px) {
+    .banner-container {
+        margin-top: 100px; /* Pour éviter le chevauchement avec la navbar */
+    }
+    
+
     .banner-text {
         font-size: 40px;
-      
     }
 }

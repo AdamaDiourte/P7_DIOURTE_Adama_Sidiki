@@ -1,47 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import appartData from '../../data/data.js'; // Assurez-vous que le chemin d'accès est correct
-import "./equipements.css";
+import Collapse from './collapse'; // Import du composant Collapse
+import appartData from '../../data/data.js'; 
 
-function Equipments() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [equipments, setEquipments] = useState([]); // État pour stocker les équipements
-  const { appartId } = useParams(); // Récupère l'ID de l'appartement depuis l'URL
+function Equipement() {
+  const [equipments, setEquipments] = useState([]);
+  const { appartId } = useParams();
 
   useEffect(() => {
     // Trouver l'appartement avec l'ID correspondant
     const foundAppart = appartData.find(appart => appart.id === appartId);
-    if (foundAppart && foundAppart.equipments) {
+    if (foundAppart) {
       setEquipments(foundAppart.equipments); // Mettre à jour les équipements
     }
   }, [appartId]);
 
-  const toggleEquipments = () => {
-    setIsOpen(!isOpen);
-  };
-
   // Gérer le cas où les équipements ne sont pas trouvés
-  if (equipments.length === 0) {
+  if (!equipments.length) {
     return <div>Équipements non disponibles</div>;
   }
 
+  // Préparer le contenu des équipements sous forme de liste
+  const equipmentContent = (
+    <ul>
+      {equipments.map((equipment, index) => (
+        <li key={index}>{equipment}</li>
+      ))}
+    </ul>
+  );
+
   return (
-    <div className='equipements'>
-      <div className='equipement_buton' onClick={toggleEquipments}>
-        <button>Equipement</button>
-        <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} />
-      </div>
-      {isOpen && (
-        <ul className='equipement_texte'>
-          {equipments.map((equipment, index) => (
-            <li key={index}>{equipment}</li>
-          ))}
-        </ul>
-      )}
-    </div>
+    <Collapse title="Équipements" content={equipmentContent} />
   );
 }
 
-export default Equipments;
+export default Equipement;
+

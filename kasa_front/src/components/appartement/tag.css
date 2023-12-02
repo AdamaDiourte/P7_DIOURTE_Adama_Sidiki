@@ -1,5 +1,6 @@
 .tagDiv {
-    display: flex; 
+    display: flex;
+    flex-wrap: wrap; 
     gap: 10px;
   }
   
@@ -11,13 +12,20 @@
     border-radius: 15px; 
     cursor: pointer; 
     transition: background-color 0.3s ease; 
-    width: 115px;
+    width: 80px;
     text-align: center;
     font-size: 0.5rem;
-
 }
+
   
-.tagSpan :hover {
-    background-color: #e05a5a;
+.tagSpan:hover {
+    background-color: #e97878;
+}
+
+@media (min-width: 768px) {
+    .tagSpan{
+        font-size: 0.8rem;
+        width: 100px;
+    }
 }
   

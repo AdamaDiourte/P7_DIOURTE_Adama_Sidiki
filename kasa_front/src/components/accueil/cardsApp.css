@@ -2,19 +2,16 @@
     border-radius: 10px;
     margin: 20px 15px;
     border: 1px solid #ddd; 
-    min-width: 30%;
-    min-height: 40vh;
     background-color: #f4d8d8; 
     position: relative;
     overflow: hidden; 
     transition: transform 0.5s;
     cursor: pointer;
-   
 }
 
 .cardAppart .img_cover { 
     width: 100%; 
-    height: auto;
+    height: 200px; /* Hauteur fixe pour les mobiles */
     object-fit: cover;
     display: block;
     border-radius: 10px 10px 0 0;
@@ -38,46 +35,26 @@
     border-radius: 5px;
 }
 
-
-
-
 @media (min-width: 768px) {
-    
-    /* .cardAppart {
-        min-width: 45%;
-        height: auto;
-    } */
-    /* .cardAppart {
-        min-width: 45%; 
-        min-height: 30vh; 
-    } */
-
     .div_Appart {
         margin-top: 20px;
-      
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        
-      
     }
-
 
     .div_Appart > * {
-        flex: 0 0 calc(33.33% - 10px); /* Chaque élément prend environ un tiers de la largeur totale, moins 10px pour l'espacement */
-        margin: 5px; /* Marge autour de chaque élément */
-        
-       
+        flex: 0 0 calc(33.33% - 10px);
+        margin: 5px;
     }
 
+    .cardAppart .img_cover {
+        height: 300px; /* Hauteur ajustée pour les grands écrans */
+    }
 }
-
-
-
 
 @media (min-width: 1024px) {
     .cardAppart {
         min-width: 30%;
-        height: auto;
     }
 }

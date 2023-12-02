@@ -37,7 +37,7 @@ function Carrousel() {
         {pictures.map((pic, index) => (
           <div key={index} className="slide-container">
             <img src={pic} alt={`Image de l'appartement ${index + 1}`} />
-            <p className="legend">{`Image ${index + 1} sur ${pictures.length}`}</p>
+            <p className="legend">{`${index + 1} / ${pictures.length}`}</p>
           </div>
         ))}
       </Carousel>

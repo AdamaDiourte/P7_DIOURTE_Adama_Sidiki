@@ -1,0 +1,50 @@
+/* Styles pour le conteneur du composant Collapse */
+.collapse-container {
+    background-color: #f4efef; 
+    border-radius: 8px; 
+    margin: 10px 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour le bouton qui déclenche l'ouverture/fermeture du contenu */
+.collapse-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer; 
+    background-color: #ff6060; 
+}
+
+.collapse-button button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: white; 
+    cursor: pointer;
+}
+
+/* Styles pour les icônes FontAwesome */
+.collapse-button svg {
+    color: white;
+    font-size: 18px;
+}
+
+/* Styles pour le contenu du composant Collapse */
+.collapse-content {
+    padding: 10px 15px; 
+    background-color: #f2f2f2; 
+    color: #ff6060;
+    font-size: 14px;
+    line-height: 1.6;
+    border-top: 1px solid #e0e0e0; 
+}
+
+/* Média queries pour les écrans d'une largeur minimale de 768px */
+@media (min-width: 768px) {
+    .collapse-container {
+        width: 45%; 
+        margin: 10px auto;
+    }
+}

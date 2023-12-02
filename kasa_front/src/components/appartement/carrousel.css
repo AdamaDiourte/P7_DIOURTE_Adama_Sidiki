@@ -5,6 +5,7 @@
 }
 
 .slide-container {
+    margin-top: 40px;
     position: relative;
     text-align: center;
 }
@@ -29,6 +30,7 @@
 .carousel .control-next.control-arrow {
     right: 10px;
     height: 40vh;
+    
 }
   
 /* Suppression des pointillés de pagination */
@@ -43,6 +45,7 @@
 .carousel .thumb.selected, .carousel .thumb:hover {
     border: none;
 }
+
 
 .carousel .slide {
     background: none;
@@ -62,3 +65,9 @@
     z-index: 2; 
 }
   
+@media (min-width: 1024px) {
+    .slide-container {
+        margin-top: 100px;
+       
+    }
+}

@@ -9,55 +9,52 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 5px;
-    border: 1px solid greenyellow;
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    background-color: white; 
-    z-index: 1000; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
 }
 
-.div-navlink {
+.nav-links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5px;
-    font-size: 15px;
-    list-style-type: none;
+    padding: 0;
+    list-style: none;
     gap: 20px;
-    border: 1px solid rgb(255, 47, 71);
+    margin: 0; /* Suppression de la marge par défaut */
 }
 
-.div-navlink a {
+.nav-links li {
+    padding: 5px; 
+}
+
+.nav-links a {
     color: #FF6060;
     text-decoration: none;
 }
 
-.div-navlink .link-active {
+.nav-links .link-active {
     text-decoration: underline;
-    color: #FF6060; 
+    color: #FF6060;
 }
 
-/* Media query pour les tablettes */
+/* Media queries */
 @media (min-width: 768px) {
     .navbar-logo > img {
         max-width: 150px;
     }
     
-    .div-navlink a {
+    .nav-links a {
         font-size: 30px;
     }
 }
 
-/* Media query pour PC */
 @media (min-width: 1024px) {
     .navbar-logo > img {
-        background-color: rgb(229, 217, 228);
         min-width: 100px;
     }
     .navbar {
-        background-color: rgb(217, 255, 0);
         padding: 10px;
     }
 }
