@@ -1,0 +1,24 @@
+// Importation du fichier de variables et mixins
+@import '../variables/variablesMixins';
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto; 
+    text-align: left; 
+    padding: $gapMedium;
+
+    .collapse-container {
+        width: 100%;
+        margin-bottom: $gapMedium;
+
+        @media (min-width: 768px) {
+            width: 90%;
+        }
+
+        @media (min-width: 1024px) {
+            width: 50%;
+        }
+    }
+}

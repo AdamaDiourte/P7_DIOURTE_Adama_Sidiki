@@ -1,0 +1,44 @@
+// Importation du fichier de variables et mixins
+@import '../variables/variablesMixins';
+
+.collapse-container {
+    border-radius: $borderRadius;
+    margin: $gapSmall 0;
+
+    @media (min-width: 768px) {
+        width: 45%;
+        margin: $gapSmall auto;
+    }
+}
+
+.collapse-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: $borderRadiusMedium;
+    padding: $gapSmall $gapMedium;
+    cursor: pointer;
+    background-color: $primaryColor;
+
+    button {
+        background: none;
+        border: none;
+        font-size: 16px;
+        color: $whiteColor;
+        cursor: pointer;
+    }
+
+    svg {
+        color: $whiteColor;
+        font-size: 18px;
+    }
+}
+
+.collapse-content {
+    padding: $gapSmall $gapMedium;
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    font-size: 14px;
+    line-height: 1.6;
+    border-top: 1px solid #e0e0e0;
+}

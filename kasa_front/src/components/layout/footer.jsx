@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../styles/footer.css";
+import "../../styles/fichierstyles/footer.scss";
 import Imagefooter from "../../images/Logo.png"; 
 
 function Footer() {

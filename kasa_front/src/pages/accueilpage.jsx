@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/accueilpage.css";
+import "../styles/fichierstyles/accueilpage.scss";
 import Banner from '../components/banner/banner.jsx';
 import { Link } from 'react-router-dom';
 import appartData from '../data/data.js';

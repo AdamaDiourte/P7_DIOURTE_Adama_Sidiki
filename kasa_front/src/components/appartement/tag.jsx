@@ -1,7 +1,8 @@
 import React from 'react';
-import { useParams } from 'react-router-dom'; // Importer useParams
+import { useParams } from 'react-router-dom';
+import '../../styles/fichierstyles/tag.scss'; 
 import appartData from '../../data/data.js';
-import '../../styles/tag.css'; 
+
 
 function TagName() {
   const { appartId } = useParams(); // Récupérer l'ID de l'appartement

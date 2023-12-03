@@ -1,0 +1,32 @@
+// Importing variables and mixins
+@import '../variables/variablesMixins';
+
+.description_buton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $primaryColor; 
+    color: $whiteColor; 
+    cursor: pointer;
+    padding: $gapSmall;
+    margin: 15px 0;
+    border-radius: $borderRadiusSmall;
+
+    button {
+        background: none;
+        border: none;
+        color: $whiteColor;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+
+    svg {
+        color: $whiteColor;
+    }
+}
+
+.description_texte {
+    text-align: justify;
+    color: $primaryColor;
+    margin-top: $gapSmall;
+}

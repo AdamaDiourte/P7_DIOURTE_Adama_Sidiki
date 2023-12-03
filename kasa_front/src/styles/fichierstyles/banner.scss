@@ -1,0 +1,38 @@
+// Importation du fichier de variables et mixins
+@use "sass:math";
+@import '../variables/variablesMixins';
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 10vh;
+    border-radius: $borderRadiusSmall;
+    margin: 60px $gapSmall 0 $gapSmall;
+
+    @media (min-width: 768px) {
+        min-height: 20vh;
+        border-radius: $borderRadiusMedium;
+    }
+
+    @media (min-width: 1024px) {
+        margin-top: 100px; // Pour éviter le chevauchement avec la navbar
+    }
+}
+
+.banner-text {
+    color: $whiteColor;
+    font-size: 20px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        font-size: 24px;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 40px;
+    }
+}

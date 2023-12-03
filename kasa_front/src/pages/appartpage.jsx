@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import '../styles/appartpage.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import '../styles/fichierstyles/appartpage.scss';
 import appartData from '../data/data.js';
 import Description from '../components/appartement/description.jsx';
 import Equipement from '../components/appartement/equipements.jsx';
 import TagName from '../components/appartement/tag.jsx';
 import Carrousel from '../components/appartement/carrousel.jsx';
 import Errorpage from './errorpage.jsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 
 

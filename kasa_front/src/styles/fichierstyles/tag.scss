@@ -1,0 +1,30 @@
+@import '../variables/variablesMixins';
+
+.tagDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gapSmall;
+}
+
+.tagSpan {
+    border: none;
+    background-color: $primaryColor;
+    color: $whiteColor;
+    padding: $gapSmall;
+    border-radius: $borderRadiusLarge;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 80px;
+    @include flexCenter;
+    font-size: $fontSizeSmall;
+    height: auto;
+
+    &:hover {
+        background-color: #f79494;
+    }
+
+    @media (min-width: 768px) {
+        font-size: $fontSizeMedium;
+        width: 100px;
+    }
+}

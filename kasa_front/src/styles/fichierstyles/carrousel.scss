@@ -1,0 +1,72 @@
+// Importation du fichier de variables et mixins
+@import '../variables/variablesMixins';
+
+.carrousel-container {
+    width: 100%;
+    position: relative;
+    margin-top: $gapLarge;
+
+    .slide-container {
+        position: relative;
+        text-align: center;
+
+        img {
+            width: 100%;
+            height: 30vh;
+            object-fit: cover;
+            border-radius: $borderRadius;
+
+            @media (min-width: 768px) {
+                height: 50vh;
+            }
+        }
+    }
+}
+
+.carousel {
+    .control-arrow {
+        background-color: $blackColor !important; 
+        opacity: 0.8;
+        top: 40% !important;
+        bottom: 40% !important;
+        position: absolute !important;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .control-prev.control-arrow {
+        left: $gapMedium;
+    }
+
+    .control-next.control-arrow {
+        right: $gapMedium;
+    }
+
+    .control-dots {
+        display: none;
+    }
+
+    .thumb {
+        border: none;
+
+        &.selected, &:hover {
+            border: none;
+        }
+    }
+
+    .slide {
+        background: none;
+    }
+
+    .legend {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block; // Affichage du compteur sur grands écrans
+           
+        }
+    }
+}
+

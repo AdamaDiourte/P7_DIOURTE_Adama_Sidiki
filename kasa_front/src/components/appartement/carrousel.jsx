@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import "../../styles/fichierstyles/carrousel.scss";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Importation des styles de base du carrousel
 import appartData from '../../data/data.js';
-import "../../styles/carrousel.css";
+
 
 function Carrousel() {
   const [pictures, setPictures] = useState([]);

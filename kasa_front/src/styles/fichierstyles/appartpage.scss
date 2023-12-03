@@ -1,0 +1,135 @@
+// Importation du fichier de variables et mixins
+@import '../variables/variablesMixins';
+
+.pageAppart {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: $gapSmall;
+
+    @media (min-width: 768px) {
+        max-width: 1200px;
+        margin: auto;
+        padding: $gapMedium;
+    }
+}
+
+.appartInfo {
+    margin: $gapMedium 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: $gapMedium;
+    }
+}
+
+.appartName, .locationInfo, .hostInfo_Name {
+    color: $primaryColor;
+    font-weight: 500;
+}
+
+.appartName {
+    font-size: 18px;
+    line-height: 142.6%;
+
+    @media (min-width: 768px) {
+        font-size: 24px;
+        margin: 0;
+    }
+}
+
+.locationInfo {
+    font-size: 14px;
+    line-height: 142.6%;
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+}
+
+.hostInfo_Name {
+    text-align: right;
+    width: 45px;
+    font-size: 12px;
+    line-height: 142.6%;
+    margin-right: $gapSmall;
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+        margin: 5px 0;
+        width: 80px;
+    }
+}
+
+.imgHost {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: $gapSmall;
+
+    @media (min-width: 768px) {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.hostInfo {
+    display: flex;
+    align-items: center;
+}
+
+.rating {
+    display: flex;
+    font-size: 20px;
+    gap: $gapSmall;
+    color: $primaryColor;
+}
+
+.hostEtNotation {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @media (min-width: 768px) {
+        flex-direction: column;
+        margin-left: auto;
+        width: auto;
+
+        .rating {
+            margin-top: $gapSmall;
+        }
+    }
+}
+
+.descriptionAndEquipement {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .description, .equipements {
+            flex-basis: 48%; // légère réduction pour l'espacement
+            overflow: hidden; // Cache le contenu lorsqu'il est fermé
+
+            .collapse-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+
+                &.open {
+                    max-height: 500px; // Hauteur maximale pour le contenu ouvert
+                }
+            }
+        }
+    }
+}

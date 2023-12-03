@@ -1,0 +1,59 @@
+@import '../variables/variablesMixins';
+
+.navbar-logo {
+    > img {
+        cursor: pointer;
+        max-width: 50px;
+        margin: auto;
+
+        @media (min-width: 768px) {
+            max-width: 150px;
+        }
+
+        @media (min-width: 1024px) {
+            min-width: 100px;
+        }
+    }
+}
+
+.navbar {
+    @include flexCenter; // Utilisation du mixin pour centrer les éléments
+    justify-content: space-between;
+    padding: 0 $gapSmall;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $whiteColor;
+    z-index: 1000;
+
+    @media (min-width: 1024px) {
+        padding: $gapSmall;
+    }
+}
+
+.nav-links {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    gap: 20px; 
+    margin: 0;
+
+    li {
+        padding: 5px;
+    }
+
+    a {
+        color: $primaryColor;
+        text-decoration: none;
+
+        @media (min-width: 768px) {
+            font-size: $fontSizeLarge;
+        }
+    }
+
+    .link-active {
+        text-decoration: underline;
+        color: $primaryColor; // Utilisation de la variable pour la couleur du texte
+    }
+}

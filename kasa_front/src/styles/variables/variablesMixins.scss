@@ -1,0 +1,35 @@
+// Variables
+$primaryColor: #ff6060;
+$secondaryColor: #f2f2f2;
+$whiteColor: white;
+$blackColor: black;
+$fontSizeSmall: 0.5rem;
+$fontSizeMedium: 0.8rem;
+$fontSizeLarge: 2rem;
+$gapSmall: 10px;
+$gapMedium: 15px;
+$gapLarge: 60px;
+$borderRadius:8px;
+$borderRadiusSmall: 5px;
+$borderRadiusMedium: 10px;
+$borderRadiusLarge: 20px;
+
+
+// Mixins
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin responsiveFont($size) {
+    font-size: $size;
+
+    @media (min-width: 768px) {
+        font-size: $fontSizeMedium;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: $fontSizeLarge;
+    }
+}

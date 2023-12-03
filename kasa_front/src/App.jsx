@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/App.css';
+import './styles/fichierstyles/App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/layout'; // Remplacez par le chemin d'accès de votre Layout
 import ContenerMain from "./components/accueil/cardsAppartContainer";

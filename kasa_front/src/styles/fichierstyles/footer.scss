@@ -1,0 +1,48 @@
+// .footer {
+//     background-color: black;
+//     max-width: 100%;
+//     height: auto;
+//     padding: 10px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+
+//     .textfooter {
+//         color: white;
+//     }
+
+//     .imgfooter {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+
+//         > img {
+//             filter: brightness(0) invert(1);
+//             width: 120px;
+//         }
+//     }
+// }
+
+@import '../variables/variablesMixins';
+
+.footer {
+    background-color: $blackColor; 
+    max-width: 100%;
+    height: auto;
+    padding: $gapSmall; 
+    @include flexCenter;
+    flex-direction: column;
+
+    .textfooter {
+        color: $whiteColor;
+    }
+
+    .imgfooter {
+        @include flexCenter; // Utilisation du mixin pour centrer les éléments
+        > img {
+            filter: brightness(0) invert(1); // Pour ajuster le rendu de la couleur 
+            width: 120px;
+        }
+    }
+}

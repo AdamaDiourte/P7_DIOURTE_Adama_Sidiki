@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Collapse from '../collapse/collapse.jsx'; // Import du composant Collapse
-import appartData from '../../data/data.js'; 
+import "../../styles/fichierstyles/equipements.scss"; 
+import Collapse from '../collapse/collapse.jsx'; 
+import appartData from '../../data/data.js';
+
 
 function Equipement() {
   const [equipments, setEquipments] = useState([]);

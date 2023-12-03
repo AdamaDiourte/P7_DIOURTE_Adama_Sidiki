@@ -1,0 +1,38 @@
+@import '../variables/variablesMixins';
+
+.equipement {
+    margin-top: $gapMedium;
+}
+
+.equipement_buton {
+    @include flexCenter;
+    background-color: $primaryColor;
+    border: none;
+    padding: $gapSmall;
+    color: $whiteColor;
+    cursor: pointer;
+    border-radius: $borderRadiusSmall;
+
+    button {
+        background: none;
+        border: none;
+        color: $whiteColor;
+        cursor: pointer;
+        margin-right: $gapSmall;
+    }
+
+    svg {
+        color: $whiteColor;
+    }
+}
+  
+.equipement_texte {
+    list-style-type: none;
+    padding: 0;
+    margin: $gapSmall $gapSmall 0 $gapSmall;
+    color: $primaryColor;
+
+    li {
+        margin-bottom: $gapSmall;
+    }
+}
