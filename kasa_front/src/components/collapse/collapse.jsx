@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import "./collapse.css";
+import "../../styles/collapse.css";
 
 function Collapse({ title, content }) {
   const [isOpen, setIsOpen] = useState(false);

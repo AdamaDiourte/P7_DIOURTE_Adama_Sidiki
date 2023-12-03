@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import appartData from '../../data/data.js';
-import Collapse from './collapse.jsx';
+import Collapse from '../collapse/collapse.jsx';
 
 function AppartementDescription() {
   const [description, setDescription] = useState('');

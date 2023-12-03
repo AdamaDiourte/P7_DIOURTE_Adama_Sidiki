@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Importation des styles de base du carrousel
 import appartData from '../../data/data.js';
-import "./carrousel.css";
+import "../../styles/carrousel.css";
 
 function Carrousel() {
   const [pictures, setPictures] = useState([]);

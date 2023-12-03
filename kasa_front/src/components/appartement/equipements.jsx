@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Collapse from './collapse'; // Import du composant Collapse
+import Collapse from '../collapse/collapse.jsx'; // Import du composant Collapse
 import appartData from '../../data/data.js'; 
 
 function Equipement() {

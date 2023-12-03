@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import appartData from '../../data/data.js';
-import Description from './description';
-import Equipement from './equipements';
-import TagName from './tag';
-import Carrousel from './carrousel';
-import Errorpage from '../errorPage/errorpage.jsx';
+import '../styles/appartpage.css';
+import appartData from '../data/data.js';
+import Description from '../components/appartement/description.jsx';
+import Equipement from '../components/appartement/equipements.jsx';
+import TagName from '../components/appartement/tag.jsx';
+import Carrousel from '../components/appartement/carrousel.jsx';
+import Errorpage from './errorpage.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import './pageAppart.css';
+
+
 
 function PageAppart() {
   const [appartement, setAppartement] = useState(null);
@@ -25,6 +27,7 @@ function PageAppart() {
 
   return (
     <div className='pageAppart'>
+      
       <Carrousel pictures={appartement.pictures} />
 
       <div className='appartInfo'>
@@ -52,6 +55,7 @@ function PageAppart() {
         <Description description={appartement.description} />
         <Equipement equipments={appartement.equipments} />
       </div>
+
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import "./errorpage.css";
+import "../styles/errorpage.css";
+import Layout from '../components/layout/layout.jsx';
 
 
 function Errorpage() {

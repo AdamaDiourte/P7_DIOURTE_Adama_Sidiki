@@ -1,9 +1,10 @@
 import React from 'react';
+import "../styles/accueilpage.css";
+import Banner from '../components/banner/banner.jsx';
 import { Link } from 'react-router-dom';
-import appartData from '../../data/data.js';
-import Banner from '../banner/banner';
-import bannerImage from '../../images/bannerImage.png';
-import "./cardsApp.css";
+import appartData from '../data/data.js';
+import bannerImage from '../images/bannerImage.png';
+
 
 function CardsAppartement() {
   return (

@@ -21,6 +21,9 @@
     margin-bottom: 20px; 
 }
 
+.returnLink > ul{
+    padding-left: 0;
+}
 .returnLink {
     text-decoration: none; 
 }

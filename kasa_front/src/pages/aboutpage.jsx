@@ -1,12 +1,13 @@
 import React from 'react'
-import "./about.css";
-import Collapse from '../appartement/Collapse';
-import Banner from '../banner/banner';
-import bannerImage from '../../images/BackgroundApropos.png';
+import "../styles/aboutpage.css";
+import Collapse from '../components/collapse/collapse';
+import Banner from '../components/banner/banner';
+import bannerImage from '../images/BackgroundApropos.png';
 
 function About() {
   return (
     <div >
+      
       <div>
         <Banner backgroundImage={bannerImage} />
       </div>

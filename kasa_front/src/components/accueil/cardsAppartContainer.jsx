@@ -1,5 +1,5 @@
 import React from 'react';
-import "./main.css";
+import "../../styles/cardsAppartContainer.css";
 
 function ContenerMain(props) {
   const children = props.children;

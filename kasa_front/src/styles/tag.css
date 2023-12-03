@@ -2,8 +2,8 @@
     display: flex;
     flex-wrap: wrap; 
     gap: 10px;
-  }
-  
+}
+
 .tagSpan {
     border: none; 
     background-color: #ff6060; 
@@ -13,19 +13,21 @@
     cursor: pointer; 
     transition: background-color 0.3s ease; 
     width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 0.5rem;
+    height: auto;
 }
 
-  
 .tagSpan:hover {
     background-color: #e97878;
 }
 
 @media (min-width: 768px) {
-    .tagSpan{
+    .tagSpan {
         font-size: 0.8rem;
         width: 100px;
     }
 }
-  

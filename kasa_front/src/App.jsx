@@ -1,32 +1,27 @@
 import React from 'react';
-import Header from "./components/accueil/header";
-import Navbar from "./components/layaout/navbar";
-import Banner from "./components/banner/banner";
-import ContenerMain from "./components/accueil/main";
-import CardsAppartement from "./components/accueil/cardsAppartement";
-import Footer from "./components/layaout/footer";
-import About from "./components/about/about";
-
-
-
-
-import './App.css';
-
-
+import './styles/App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/layout/layout'; // Remplacez par le chemin d'accès de votre Layout
+import ContenerMain from "./components/accueil/cardsAppartContainer";
+import CardsAppartement from "./pages/accueilpage";
+import About from "./pages/aboutpage";
+import PageAppart from "./pages/appartpage";
+import ErrorPage from "./pages/errorpage";
 
 function App() {
   return (
-    <div>
-      <Header>
-        <Navbar/>
-      </Header>
-      
-     <ContenerMain>
-        <CardsAppartement/>
-     </ContenerMain>
-     <Footer/>
-    </div>
-  )
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<ContenerMain><CardsAppartement/></ContenerMain>} />
+          <Route path="/appartement/:appartId" element={<PageAppart />} />
+          <Route path="/accueil" element={<li>Accueil</li>} />
+          <Route path="/apropos" element={<About />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </Layout>
+    </Router>
+  );
 }
 
-export default App
+export default App;
