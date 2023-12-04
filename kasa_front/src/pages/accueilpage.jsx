@@ -8,7 +8,7 @@ import bannerImage from '../images/bannerImage.png';
 
 function CardsAppartement() {
   return (
-    <div>
+    <>
       <Banner backgroundImage={bannerImage} text="Chez vous, partout et ailleurs" />
       <div className='div_Appart'>
         {appartData.map(item => (
@@ -20,7 +20,7 @@ function CardsAppartement() {
           </Link>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 

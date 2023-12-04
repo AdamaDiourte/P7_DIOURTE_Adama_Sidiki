@@ -23,12 +23,16 @@ function About() {
     {
       title: "Sécurité",
       content: "La sécurité est notre priorité. Nous appliquons les meilleures pratiques pour assurer la sécurité de nos clients."
+    },
+    {
+      title: "Sécurité 2",
+      content: "Ltoto our assurer la sécurité de nos clients."
     }
   ];
 
   return (
     <div >
-      <Banner backgroundImage={bannerImage} text="" />
+      <Banner backgroundImage={bannerImage} />
       <div className='about'>
         {collapsesData.map((collapse, index) => (
           <Collapse 
