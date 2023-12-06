@@ -28,7 +28,7 @@ function About() {
 
   return (
     <div >
-      <Banner backgroundImage={bannerImage} text="" />
+      <Banner backgroundImage={bannerImage} />
       <div className='about'>
         {collapsesData.map((collapse, index) => (
           <Collapse 

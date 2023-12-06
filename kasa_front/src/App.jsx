@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/fichierstyles/App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/layout/layout'; // Remplacez par le chemin d'accès de votre Layout
+import Layout from './components/layout/layout';
 import ContenerMain from "./components/accueil/cardsAppartContainer";
 import CardsAppartement from "./pages/accueilpage";
 import About from "./pages/aboutpage";

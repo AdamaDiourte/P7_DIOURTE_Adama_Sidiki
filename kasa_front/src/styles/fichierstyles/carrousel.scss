@@ -24,26 +24,6 @@
 }
 
 .carousel {
-    .control-arrow {
-        background-color: $blackColor !important; 
-        opacity: 0.8;
-        top: 40% !important;
-        bottom: 40% !important;
-        position: absolute !important;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    .control-prev.control-arrow {
-        left: $gapMedium;
-    }
-
-    .control-next.control-arrow {
-        right: $gapMedium;
-    }
-
     .control-dots {
         display: none;
     }

@@ -6,8 +6,7 @@
     margin: $gapSmall 0;
 
     @media (min-width: 768px) {
-        width: 45%;
-        margin: $gapSmall auto;
+        width: 48%;
     }
 }
 
@@ -40,5 +39,4 @@
     color: $primaryColor;
     font-size: 14px;
     line-height: 1.6;
-    border-top: 1px solid #e0e0e0;
 }
