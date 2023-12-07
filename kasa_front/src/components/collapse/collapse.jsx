@@ -22,7 +22,7 @@ function Collapse({ title, content }) {
         <button>{title}</button>
         <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} />
       </div>
-      {isOpen && <p className='collapse-content'>{content}</p>}
+      {isOpen && <div className='collapse-content'>{content}</div>}
     </div>
   );
 }

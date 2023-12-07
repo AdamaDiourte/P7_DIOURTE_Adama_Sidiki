@@ -12,5 +12,5 @@ Currently, two official plugins are available:
 # Lancement du front
 - initialiser le projet sur kasa avec la commande "cd kasa_front"
 - Faire "npm run dev" ou "npm start"
-- Cliquer sur le lien qui s'ouvre dans le terminal pour lancer le front
+- Cliquer sur le lien qui s'ouvre dans le terminal pour lancer le front (http://localhost:5173/)
 - Les données utilisées proviennent du fichier 'data.js" qui fait office de base de données
