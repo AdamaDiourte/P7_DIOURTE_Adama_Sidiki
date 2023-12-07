@@ -1,28 +1,75 @@
 @use "sass:math";
 @import '../variables/variablesMixins';
 
+// Définition de l'animation fadeIn
+@keyframes fadeIn {
+    0% {
+        opacity: 0; // Commence avec une opacité de 0
+        transform: translateY(20px); // Décalage vertical initial
+    }
+    100% {
+        opacity: 1; // Termine avec une opacité de 1
+        transform: translateY(0); // Termine à sa position initiale
+    }
+}
+
+.div_Appart {
+    display: grid; // Utilise une grille pour disposer les cartes
+    grid-gap: 20px; // Espacement entre les cartes
+    margin: 10px;
+    justify-content: center; // Centre les cartes dans le conteneur
+    padding: 15px;
+    background-color: rgb(248, 246, 246); // Couleur de fond du conteneur
+    border-radius: 20px; // Arrondit les coins du conteneur
+
+    // Media queries pour différentes largeurs d'écran
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr); // Une colonne sur les écrans mobiles
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr); // Deux colonnes sur les tablettes
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr); // Trois colonnes sur les grands écrans
+        margin: 20px;
+    }
+}
+
 .cardAppart {
     border-radius: 10px;
-    margin: 20px 15px;
     border: 1px solid #ddd;
-    background-color: $primaryColor; // Couleur primaire du site
+    background-color: $primaryColor;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    padding-bottom: 50px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.20);
-    transition: box-shadow 0.3s ease; // Transition ajoutée pour le box-shadow
+    transition: box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease-out forwards; // Applique l'animation fadeIn
 
     &:hover {
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.30); // Box shadow plus prononcé au survol
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.30); // Effet au survol
     }
 
     .img_cover {
         width: 100%;
-        height: 170px; // Hauteur fixe pour les mobiles
+        height: 100%;
         object-fit: cover;
         display: block;
+        position: relative;
         border-radius: 10px 10px 0 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg,hsla(0,0%,100%,0),rgba(0,0,0,.4)); // Assombrit l'image pour améliorer la lisibilité du texte
+            z-index: 2;
+        }
     }
 
     .title_Appart {
@@ -32,52 +79,36 @@
         left: 10px;
         right: 10px;
         margin: 0;
-        padding: 2px;
-        background-color: transparent;
-        font-size: 13px;
-        white-space: normal;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        width: 180px; // Largeur ajustée pour mobile
+        padding-left: 2px;
+        font-size: 1.2rem;
+        z-index: 3; // Assure que le texte est au-dessus de l'image
+    }
+}
+
+// Calcul du délai d'animation basé sur la position de la carte dans la grille
+.div_Appart > :nth-child(n) {
+    animation-delay: calc(0.1s * (var(--row) + var(--col))); 
+}
+
+// Media queries pour ajuster les hauteurs des images et calculer les rangées et colonnes
+@media (max-width: 767px) {
+    .cardAppart .img_cover {
+        height: 200px; // Hauteur fixe pour les mobiles
+    }
+
+    .div_Appart > :nth-child(n) {
+        --row: calc((n - 1) / 1); // Calcule la rangée pour les mobiles
+        --col: calc((n - 1) % 1); // Calcule la colonne pour les mobiles
     }
 }
 
 @media (min-width: 768px) {
-    .cardAppart {
-        .img_cover {
-            height: 200px; // Hauteur ajustée pour les grands écrans
-        }
-
-        .title_Appart {
-            font-size: 14px;
-            width: 200px; // Largeur ajustée pour grands écrans
-        }
+    .cardAppart .img_cover {
+        height: 250px; // Hauteur fixe pour les tablettes
     }
 
-    .div_Appart {
-        margin-top: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-
-        > * {
-            flex: 0 0 calc(33.33% - 10px);
-            margin: 5px;
-        }
-    }
-}
-
-@media (min-width: 1024px) {
-    .cardAppart {
-        min-width: 30%;
-        height: 220px; // Hauteur standardisée pour les grands écrans
-        padding-bottom: 30px;
-
-        .img_cover {
-            height: 200px; // Hauteur ajustée pour les grands écrans
-        }
+    .div_Appart > :nth-child(n) {
+        --row: calc((n - 1) / 2); // Calcule la rangée pour les tablettes
+        --col: calc((n - 1) % 2); // Calcule la colonne pour les tablettes
     }
 }

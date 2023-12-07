@@ -1,9 +1,52 @@
-// Importation du fichier de variables et mixins
+// // Importation du fichier de variables et mixins
+// @import '../variables/variablesMixins';
+
+// .collapse-container {
+//     border-radius: $borderRadius;
+//     margin: $gapSmall 0;
+
+//     @media (min-width: 768px) {
+//         width: 48%;
+//     }
+// }
+
+// .collapse-button {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     border-radius: $borderRadiusMedium;
+//     padding: $gapSmall $gapMedium;
+//     cursor: pointer;
+//     background-color: $primaryColor;
+
+//     button {
+//         background: none;
+//         border: none;
+//         font-size: 16px;
+//         color: $whiteColor;
+//         cursor: pointer;
+//     }
+
+//     svg {
+//         color: $whiteColor;
+//         font-size: 18px;
+//     }
+// }
+
+// .collapse-content {
+//     padding: $gapSmall $gapMedium;
+//     background-color: $secondaryColor;
+//     color: $primaryColor;
+//     font-size: 14px;
+//     line-height: 1.6;
+// }
+
 @import '../variables/variablesMixins';
 
 .collapse-container {
     border-radius: $borderRadius;
     margin: $gapSmall 0;
+    transition: background-color 0.3s, box-shadow 0.3s; // Transitions pour le fond et l'ombre
 
     @media (min-width: 768px) {
         width: 48%;
@@ -18,6 +61,7 @@
     padding: $gapSmall $gapMedium;
     cursor: pointer;
     background-color: $primaryColor;
+    transition: background-color 0.3s; // Transition pour la couleur de fond
 
     button {
         background: none;
@@ -25,18 +69,36 @@
         font-size: 16px;
         color: $whiteColor;
         cursor: pointer;
+        text-align: left;
+        width: 100%;
     }
 
     svg {
         color: $whiteColor;
         font-size: 18px;
+        transition: transform 0.3s ease; // Transition pour la rotation du chevron
+    }
+
+    &.open svg {
+        transform: rotate(180deg); // Rotation du chevron lorsque ouvert
     }
 }
 
 .collapse-content {
-    padding: $gapSmall $gapMedium;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; // Transitions pour l'animation de glissement et le padding
     background-color: $secondaryColor;
     color: $primaryColor;
     font-size: 14px;
     line-height: 1.6;
+    padding: 0 $gapMedium; // Padding initial
+
+    &.open {
+        max-height: 1000px; // Hauteur maximale ajustée selon le contenu
+        padding: $gapSmall $gapMedium $gapSmall $gapMedium; // Padding lorsqu'ouvert
+        border-bottom-left-radius: $borderRadiusMedium;
+        border-bottom-right-radius: $borderRadiusMedium;
+    }
 }
+

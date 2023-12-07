@@ -4,20 +4,13 @@ body {
   margin: 0;
   padding: 0;
   min-width: 270px;
-  background-color: rgb(244, 244, 244);
+  background-color: none;
   /* Empêcher la sélection de tous les éléments sur la page */
   -webkit-user-select: none;  /* Chrome, Safari, et Opera */
   -moz-user-select: none;     /* Firefox */
   -ms-user-select: none;      /* Internet Explorer */
   user-select: none;          /* Standard non-préfixé */
 
-}
-
-/* Suppression des filigranes sur toutes les images */
-img {
-  opacity: 1;        /* Assure une opacité complète */
-  filter: none;      /* Enlève les effets de filtre */
-  background: none;  /* Enlève les arrière-plans qui pourraient être utilisés pour un filigrane */
 }
 
 

@@ -1,4 +1,45 @@
-// Importation du fichier de variables et mixins
+// // Importation du fichier de variables et mixins
+// @use "sass:math";
+// @import '../variables/variablesMixins';
+
+// .banner-container {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     min-height: 10vh;
+//     border-radius: $borderRadiusSmall;
+//     margin: 60px $gapSmall 0 $gapSmall;
+//     border-radius: 10px;
+
+//     @media (min-width: 768px) {
+//         min-height: 25vh;
+//         border-radius: $borderRadiusMedium;
+//     }
+
+//     @media (min-width: 1024px) {
+//         margin-top: 100px; // Pour éviter le chevauchement avec la navbar
+//     }
+// }
+
+// .banner-text {
+//     color: $whiteColor;
+//     font-size: 1.5rem;
+//     text-align: left;
+//     padding: 30px;
+    
+
+//     @media (min-width: 768px) {
+//         font-size: 2.5rem;
+//     }
+
+//     @media (min-width: 1024px) {
+//         font-size: 40px;
+//     }
+// }
+
 @use "sass:math";
 @import '../variables/variablesMixins';
 
@@ -9,27 +50,45 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 10vh;
+    height: 100%;
     border-radius: $borderRadiusSmall;
     margin: 60px $gapSmall 0 $gapSmall;
+    border-radius: 10px;
+    position: relative; // Nécessaire pour le positionnement du pseudo-élément
+
+    // Création d'un pseudo-élément pour assombrir l'arrière-plan
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg,hsla(0,0%,100%,0),rgba(0,0,0,.4)); // Assombrit l'image pour améliorer la lisibilité du texte
+        border-radius: inherit; // Hérite du border-radius du container
+        z-index: 1; // Place le pseudo-élément sous le texte
+    }
 
     @media (min-width: 768px) {
-        min-height: 20vh;
+        min-height: 25vh;
         border-radius: $borderRadiusMedium;
     }
 
     @media (min-width: 1024px) {
-        margin-top: 100px; // Pour éviter le chevauchement avec la navbar
+        margin-top: 100px;
     }
 }
 
 .banner-text {
     color: $whiteColor;
-    font-size: 20px;
-    text-align: center;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 30px;
+    position: relative; // S'assure que le texte est au-dessus du pseudo-élément
+    z-index: 2; // Met le texte au-dessus du pseudo-élément
 
     @media (min-width: 768px) {
-        font-size: 24px;
+        font-size: 2.5rem;
     }
 
     @media (min-width: 1024px) {

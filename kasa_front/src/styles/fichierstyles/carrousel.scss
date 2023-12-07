@@ -1,4 +1,3 @@
-// Importation du fichier de variables et mixins
 @import '../variables/variablesMixins';
 
 .carrousel-container {
@@ -9,12 +8,26 @@
     .slide-container {
         position: relative;
         text-align: center;
+        border-radius: $borderRadius; 
+
+        // Pseudo-élément pour assombrir légèrement les images
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg,hsla(0,0%,100%,0),rgba(0,0,0,.4)); // Couleur semi-transparente pour assombrir
+            border-radius: inherit; // Hériter le border-radius du conteneur
+            z-index: 1; // Assure que le pseudo-élément est sous le texte mais au-dessus de l'image
+        }
 
         img {
             width: 100%;
             height: 30vh;
             object-fit: cover;
-            border-radius: $borderRadius;
+            border-radius: inherit; // Hérite le border-radius du conteneur
 
             @media (min-width: 768px) {
                 height: 50vh;
@@ -41,11 +54,16 @@
     }
 
     .legend {
+        position: absolute;
+        z-index: 2; // S'assure que la légende est visible par-dessus le pseudo-élément
+        color: white; // Couleur du texte pour la lisibilité
+        bottom: 10px; // Positionnement en bas de l'image
+        width: 100%;
+        text-align: center;
         display: none;
 
         @media (min-width: 768px) {
             display: block; // Affichage du compteur sur grands écrans
-           
         }
     }
 }
