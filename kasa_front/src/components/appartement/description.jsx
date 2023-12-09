@@ -1,24 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 import "../../styles/fichierstyles/description.scss";
-import appartData from '../../data/data.js';
 import Collapse from '../collapse/collapse.jsx';
 
-function AppartementDescription() {
-  const [description, setDescription] = useState('');
-  const { appartId } = useParams();
-
-  useEffect(() => {
-    const foundAppart = appartData.find(appart => appart.id === appartId);
-    if (foundAppart) {
-      setDescription(foundAppart.description);
-    }
-  }, [appartId]);
-
-  if (!description) {
-    return <div>Description non disponible</div>;
-  }
-
+function AppartementDescription({ description }) {
+  //Adapation du collapse à la description de l'appartement
   return (
     <Collapse title="Description" content={description} />
   );
