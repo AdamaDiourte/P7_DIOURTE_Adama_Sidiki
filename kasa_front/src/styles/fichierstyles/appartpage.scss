@@ -89,6 +89,14 @@
     font-size: 20px;
     gap: $gapSmall;
     color: $primaryColor;
+
+    .ratingStar {
+        color: $lightGrayColor; // Couleur pour les étoiles non remplies
+    }
+
+    .ratingStar.filled {
+        color: $primaryColor; // Couleur pour les étoiles remplies
+    }
 }
 
 .hostEtNotation {

@@ -7,6 +7,10 @@
         opacity: 0; // Commence avec une opacité de 0
         transform: translateY(20px); // Décalage vertical initial
     }
+    50% {
+        opacity: 0.50; 
+        transform: translateY(12px);
+    }
     100% {
         opacity: 1; // Termine avec une opacité de 1
         transform: translateY(0); // Termine à sa position initiale
@@ -46,7 +50,7 @@
     cursor: pointer;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.20);
     transition: box-shadow 0.3s ease;
-    animation: fadeIn 0.8s ease-out forwards; // Applique l'animation fadeIn
+    animation: fadeIn 1s ease-out forwards; // Applique l'animation fadeIn
 
     &::before {
         content: "";
@@ -56,11 +60,11 @@
         right: 0;
         bottom: 0;
         background: linear-gradient(180deg,hsla(0,0%,100%,0),rgba(0,0,0,.4)); // Assombrit l'image pour améliorer la lisibilité du texte
-        z-index: 2;
+        z-index: 1;
     }
 
     &:hover {
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.30); // Effet au survol
+        box-shadow: 0 5px 10px rgba(228, 74, 74, 0.3); // Effet au survol
     }
 
     .img_cover {

@@ -10,7 +10,6 @@ import TagName from "../components/appartement/tag.jsx";
 import Carrousel from "../components/appartement/carrousel.jsx";
 import Errorpage from "./errorpage.jsx";
 
-
 function PageAppart() {
     const [appartement, setAppartement] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -25,12 +24,21 @@ function PageAppart() {
         setLoading(false);
     }, [appartId]);
 
+    const renderStars = () => {
+        return [...Array(5)].map((_, index) => (
+            <FontAwesomeIcon
+                className={index < appartement.rating ? "ratingStar filled" : "ratingStar"}
+                icon={faStar}
+                key={index}
+            />
+        ));
+    };
+
     return (
         <>
             {loading && <h1>Chargement...</h1>}
             {!loading && appartement && (
                 <div className="pageAppart">
-                    {/* Gestion du carrousel */}
                     <Carrousel 
                       pictures={appartement.pictures} 
                       currentIndex={currentIndex}
@@ -41,7 +49,6 @@ function PageAppart() {
                         <div className="appartText">
                             <h1 className="appartName">{appartement.title}</h1>
                             <p className="locationInfo">{appartement.location}</p>
-                             {/* Gestion des tags */}
                             <TagName tags={appartement.tags} />
                         </div>
 
@@ -56,21 +63,12 @@ function PageAppart() {
                             </div>
 
                             <div className="rating">
-                                {[...Array(parseInt(appartement.rating))].map(
-                                    (_, index) => (
-                                        <FontAwesomeIcon
-                                            className="ratingStars"
-                                            icon={faStar}
-                                            key={index}
-                                        />
-                                    )
-                                )}
+                                {renderStars()}
                             </div>
                         </div>
                     </div>
 
                     <div className="descriptionAndEquipement">
-                         {/* Gestion des collapses description et équipements */}
                         <Description description={appartement.description} />
                         <Equipement equipments={appartement.equipments} />
                     </div>
